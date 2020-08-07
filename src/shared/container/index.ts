@@ -7,9 +7,9 @@ import IAppointmentsRepository from '@modules/appointments/repositories/IAppoint
 import AppointmentsRepository from '@modules/appointments/infra/typeorm/repositories/AppointmentsRepository';
 
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
-import usersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
+import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository';
 
-import IUserTokensRepository from '@modules/users/repositories/IUsersTokensRepository';
+import IUsersTokensRepository from '@modules/users/repositories/IUsersTokensRepository';
 import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository';
 
 container.registerSingleton<IAppointmentsRepository>(
@@ -18,11 +18,11 @@ container.registerSingleton<IAppointmentsRepository>(
 );
 
 container.registerSingleton<IUsersRepository>(
-  'usersRepository',
-  usersRepository,
+  'UsersRepository',
+  UsersRepository,
 );
 
-container.registerSingleton<IUserTokensRepository>(
+container.registerSingleton<IUsersTokensRepository>(
   'UserTokensRepository',
   UserTokensRepository,
 );

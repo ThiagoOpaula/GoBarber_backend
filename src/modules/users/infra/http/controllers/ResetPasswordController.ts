@@ -1,6 +1,4 @@
-// index, show, create ,update, delete restful
 import { Request, Response } from 'express';
-
 import { container } from 'tsyringe';
 
 import ResetPasswordService from '@modules/users/services/ResetPasswordService';
